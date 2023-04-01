@@ -1,0 +1,16 @@
+server:
+  type: virtual
+  maxThreads: 200
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+  requestLog:
+    appenders: [] # Disable default logging (response status)
+
+logging:
+  level: INFO
+  loggers:
+    bitxon.dropwizard: DEBUG
